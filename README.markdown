@@ -1,7 +1,8 @@
-Serialize an array in 1 column, [] when no set, xx_as_text accessors and more.
+Serialize an array in one column.
 
- - can add `as_text` / `as_text=` accessors to edit in forms
- - can add `:on_set` callback for cleanup
+ - [] when not set
+ - `xxx_as_text` / `xxx_as_text=` accessors to edit in forms
+ - `:on_set` callback for cleanup
  - stores NULL when given array was empty (all empty -> `IS NULL`)
 
 Install
