@@ -1,6 +1,8 @@
 require 'activerecord'
 
 module ARSerializedArray
+  VERSION = File.read( File.join(File.dirname(__FILE__),'..','VERSION') ).strip
+  
   def serialized_array(attr_name, options={})
     options[:on_set] ||= lambda{|x|x}
 

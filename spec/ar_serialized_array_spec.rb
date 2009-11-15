@@ -72,4 +72,8 @@ describe 'ar_serialized_array' do
       User.new(:product_ids_as_text => '1,2,2').product_ids.should == [1,2]
     end
   end
+
+  it "has a VERSION" do
+    ARSerializedArray::VERSION.should =~ /^\d+\.\d+\.\d+$/
+  end
 end
