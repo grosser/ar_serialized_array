@@ -1,4 +1,4 @@
-Serialize an array in a column, [] when no set, xx_as_text accessors and more.
+Serialize an array in 1 column, [] when no set, xx_as_text accessors and more.
 
  - can add `as_text` / `as_text=` accessors to edit in forms
  - can add `:on_set` callback for cleanup
