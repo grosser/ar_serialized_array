@@ -1,7 +1,8 @@
-Serialize an array in a column, will be [] when no set.
+Serialize an array in a column, [] when no set, xx_as_text accessors and more.
 
  - can add `as_text` / `as_text=` accessors to edit in forms
  - can add `:on_set` callback for cleanup
+ - stores NULL when given array was empty (all empty -> `IS NULL`)
 
 Install
 =======
@@ -13,7 +14,7 @@ Usage
 =====
 
     class User < ActiveRecord::Base
-      serialized_array :product_ids, :accessor => :product_ids_as_text, :on_set=>lambda{|x| x.map(&:to_i).uniq}
+      serialized_array :product_ids, :accessor => :product_ids_as_text, :on_set=>lambda{|x| x.map(&:to_i).uniq }
     end
 
     User.new.product_ids        # []
@@ -24,6 +25,8 @@ Usage
 
     f.text_area :product_ids_as_text
 
+    filled = User.all(:conditions => {:product_ids=>[1,3].to_yaml})
+    empty = User.all(:conditions => {:product_ids=>nil})
 
 Author
 ======
