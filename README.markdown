@@ -28,6 +28,10 @@ Usage
     filled = User.all(:conditions => {:product_ids=>[1,3].to_yaml})
     empty = User.all(:conditions => {:product_ids=>nil})
 
+TODO
+====
+ - add support for `user.product_ids << 1`
+
 Author
 ======
 [Michael Grosser](http://pragmatig.wordpress.com)  
