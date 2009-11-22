@@ -8,7 +8,7 @@ Serialize an array in one column.
 Install
 =======
  - As Rails plugin: `script/plugin install git://github.com/grosser/ar_serialized_array.git `
- - As gem: ` sudo gem install ar_serialized_array -s http://gemcutter.org `
+ - As gem: ` sudo gem install ar_serialized_array `
 
 
 Usage
