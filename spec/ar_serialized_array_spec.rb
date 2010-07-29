@@ -21,6 +21,11 @@ describe 'ar_serialized_array' do
       UserPlain.find(user.id).product_ids.should == []
     end
 
+    it "stores nil when nil is saved" do
+      user = UserPlain.create!(:product_ids => nil)
+      UserPlain.first(:conditions => {:id => user.id, :product_ids => nil}).should == user
+    end
+
     it "stores empty arrays as NULL" do
       user = UserPlain.create!(:product_ids => [])
       UserPlain.first(:conditions => {:id => user.id, :product_ids => nil}).should == user
