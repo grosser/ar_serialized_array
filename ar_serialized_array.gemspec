@@ -12,6 +12,7 @@ Gem::Specification.new do |s|
   s.date = %q{2011-01-17}
   s.email = %q{grosser.michael@gmail.com}
   s.files = [
+    "Gemfile",
     "Rakefile",
     "Readme.md",
     "VERSION",
