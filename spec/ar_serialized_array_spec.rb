@@ -1,4 +1,4 @@
-require "spec/spec_helper"
+require "spec_helper"
 
 describe 'ar_serialized_array' do
   describe 'basics' do

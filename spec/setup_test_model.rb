@@ -5,6 +5,7 @@ ActiveRecord::Base.establish_connection(
 )
 
 # create tables
+ActiveRecord::Schema.verbose = false
 ActiveRecord::Schema.define(:version => 1) do
   create_table :users do |t|
     t.string :product_ids

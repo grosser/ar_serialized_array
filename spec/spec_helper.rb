@@ -1,4 +1,3 @@
-require 'rubygems'
-$LOAD_PATH << "lib"
-require "init"
-require "spec/setup_test_model"
+require "active_support/all"
+require "ar_serialized_array"
+require "setup_test_model"
