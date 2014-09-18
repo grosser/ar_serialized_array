@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'activerecord', '~> 2.3.18'
+gem 'activerecord', '~> 3.2.19'
 
 group :dev do
   gem 'sqlite3'
