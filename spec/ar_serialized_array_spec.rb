@@ -23,17 +23,17 @@ describe 'ar_serialized_array' do
 
     it "stores nil when nil is saved" do
       user = UserPlain.create!(:product_ids => nil)
-      UserPlain.first(:conditions => {:id => user.id, :product_ids => nil}).should == user
+      UserPlain.where(:id => user.id, :product_ids => nil).first.should == user
     end
 
     it "stores empty arrays as NULL" do
       user = UserPlain.create!(:product_ids => [])
-      UserPlain.first(:conditions => {:id => user.id, :product_ids => nil}).should == user
+      UserPlain.where(:id => user.id, :product_ids => nil).first.should == user
     end
 
     it "can search by array" do
       user = UserPlain.create!(:product_ids => [1])
-      UserPlain.first(:conditions => {:id => user.id, :product_ids => [1].to_yaml}).should == user
+      UserPlain.where(:id => user.id, :product_ids => [1].to_yaml).first.should == user
     end
 
     it "raises when non-array is given" do

@@ -1,11 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'activerecord', '~> 3.2.19'
+gem 'activerecord', '~> 4.1.6'
 
 group :dev do
   gem 'sqlite3'
   gem 'rake'
   gem 'rspec', '~>2'
-  gem 'iconv'
   gem 'jeweler'
 end
