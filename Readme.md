@@ -43,8 +43,9 @@ TODO
 ====
  - add support for `user.product_ids << 1`
 
+
 Author
 ======
 [Michael Grosser](http://grosser.it)
-michael@grosser.it  
+michael@grosser.it
 Hereby placed under public domain, do what you want, just do not hold me accountable...
